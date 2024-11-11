@@ -1,18 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JobCandidateHub.Domain.Entities.API
+namespace JobCandidateHub.Application.DTOs.Candidates
 {
-    public class Candidates
+    public class CandidatesResponseDTO
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required]
         public string Email { get; set; }
 
@@ -28,6 +24,5 @@ namespace JobCandidateHub.Domain.Entities.API
         public string? GitHubUrl { get; set; }
         [Required]
         public string Comments { get; set; }
-
     }
 }

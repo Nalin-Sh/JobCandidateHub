@@ -14,5 +14,8 @@ namespace JobCandidateHub.Application.Interfaces.Repository
         Task Update<TEntity>(TEntity entityToUpdate) where TEntity : class;
 
         Task<bool> Exists<TEntity>(Expression<Func<TEntity, bool>> filter = null) where TEntity : class;
+
+        Task<TEntity?> GetFirstOrDefaultAsync<TEntity>(Expression<Func<TEntity, bool>> filter) where TEntity : class;
+        
     }
 }

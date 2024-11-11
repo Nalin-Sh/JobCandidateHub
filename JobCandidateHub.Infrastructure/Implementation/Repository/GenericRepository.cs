@@ -54,5 +54,9 @@ namespace JobCandidateHub.Infrastructure.Implementation.Repository
 
             await _dbContext.SaveChangesAsync();
         }
+        public async Task<TEntity?> GetFirstOrDefaultAsync<TEntity>(Expression<Func<TEntity, bool>> filter) where TEntity : class
+        {
+            return await _dbContext.Set<TEntity>().FirstOrDefaultAsync(filter);
+        }
     }
 }

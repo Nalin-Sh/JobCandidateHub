@@ -18,31 +18,46 @@ namespace JobCandidateHub.Controllers
         }
 
         [HttpPost("upsert-candidate")]
-        public async Task<IActionResult> UpsertCandidate(CandidatesRequestDTO requestDTO)
+        public async Task<IActionResult> UpsertCandidate([FromForm] CandidatesRequestDTO requestDTO)
         {
-            var result = await _candidateServices.UpsertCandidate(requestDTO);
             try
             {
-                var response = new Response<CandidatesResponseDTO>
+                var result = await _candidateServices.UpsertCandidate(requestDTO);
+
+                
+                if (result == null)
+                {
+                    var response = new Response<CandidatesResponseDTO>
+                    {
+                        IsSuccess = false,
+                        ResponseData = null,
+                        StatusCode = System.Net.HttpStatusCode.BadRequest,
+                        StatusMessage = "Invalid data provided."
+                    };
+                    return BadRequest(response);
+                }
+
+                var successResponse = new Response<CandidatesResponseDTO>
                 {
                     IsSuccess = true,
                     ResponseData = result,
                     StatusCode = System.Net.HttpStatusCode.OK,
                     StatusMessage = "Candidate Added/Updated Successfully"
                 };
-                return Ok(response);
+                return Ok(successResponse);
             }
             catch (Exception ex)
             {
-                var response = new Response<CandidatesResponseDTO>
+                var errorResponse = new Response<CandidatesResponseDTO>
                 {
                     IsSuccess = false,
                     ResponseData = null,
                     StatusCode = System.Net.HttpStatusCode.InternalServerError,
                     StatusMessage = $"An error occurred: {ex.Message}"
                 };
-                return Ok(response);
+                return StatusCode((int)System.Net.HttpStatusCode.InternalServerError, errorResponse);
             }
         }
+
     }
 }

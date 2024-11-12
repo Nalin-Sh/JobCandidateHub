@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateHub", "JobCandidateHub\JobCandidateHub.csproj", "{7B424E9F-E776-4B4C-A140-CEA0B8BDC1C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateHub", "JobCandidateHub\JobCandidateHub.csproj", "{7B424E9F-E776-4B4C-A140-CEA0B8BDC1C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{33B660A6-9C19-48DF-AEAD-542B0EDC11BA}"
 EndProject
@@ -13,11 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5190353B-9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{32F0D15A-2A55-4F1A-A2E3-53E814576048}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateHub.Application", "JobCandidateHub.Application\JobCandidateHub.Application.csproj", "{1E847110-2586-4565-8755-5B9B728C2EE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateHub.Application", "JobCandidateHub.Application\JobCandidateHub.Application.csproj", "{1E847110-2586-4565-8755-5B9B728C2EE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateHub.Domain", "JobCandidateHub.Domain\JobCandidateHub.Domain.csproj", "{2AF36A4D-AE06-4441-8FE2-940557E95092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateHub.Domain", "JobCandidateHub.Domain\JobCandidateHub.Domain.csproj", "{2AF36A4D-AE06-4441-8FE2-940557E95092}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateHub.Infrastructure", "JobCandidateHub.Infrastructure\JobCandidateHub.Infrastructure.csproj", "{A6E03DAE-D51C-41BA-8AB3-36E1D4DAC0A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateHub.Infrastructure", "JobCandidateHub.Infrastructure\JobCandidateHub.Infrastructure.csproj", "{A6E03DAE-D51C-41BA-8AB3-36E1D4DAC0A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8502914D-A191-4EE0-8D52-9069C02B9BE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateHub.Tests", "JobCandidateHub.Tests\JobCandidateHub.Tests.csproj", "{1DE600DE-CE4F-457B-8B5B-CF21054B1A87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{A6E03DAE-D51C-41BA-8AB3-36E1D4DAC0A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6E03DAE-D51C-41BA-8AB3-36E1D4DAC0A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6E03DAE-D51C-41BA-8AB3-36E1D4DAC0A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE600DE-CE4F-457B-8B5B-CF21054B1A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE600DE-CE4F-457B-8B5B-CF21054B1A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE600DE-CE4F-457B-8B5B-CF21054B1A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE600DE-CE4F-457B-8B5B-CF21054B1A87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{1E847110-2586-4565-8755-5B9B728C2EE4} = {5190353B-9F47-4DB1-8C73-FD77553EC289}
 		{2AF36A4D-AE06-4441-8FE2-940557E95092} = {5190353B-9F47-4DB1-8C73-FD77553EC289}
 		{A6E03DAE-D51C-41BA-8AB3-36E1D4DAC0A1} = {32F0D15A-2A55-4F1A-A2E3-53E814576048}
+		{1DE600DE-CE4F-457B-8B5B-CF21054B1A87} = {8502914D-A191-4EE0-8D52-9069C02B9BE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {91BC5B9E-AFC5-48AA-9091-4B7DCC7FCF88}
